@@ -10,6 +10,11 @@ class AddressManager
 
     public function outputAddresses($resolve)
     {
+        if (is_string($resolve)) {
+            // 使用正则表达式判断
+            $resolve = (preg_match("/^(false|no|off)$/i", $resolve) ) ? false : true;
+        }
+
         foreach ($this->addresses as $address) {
             print $address;
             if ($resolve) {
