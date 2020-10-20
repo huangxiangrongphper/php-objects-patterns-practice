@@ -9,6 +9,8 @@ class XmlException extends \Exception
 {
     private $error;
 
+    // 当SimpleXML遇到一个损坏的XML文件时，会生成LibXmlError类。
+    // 它与Exception类似，有一个$message属性和一个$code属性
     public function __construct(\LibXmlError $error)
     {
         $shortfile = basename($error->file);
