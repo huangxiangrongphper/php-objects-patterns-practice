@@ -15,25 +15,25 @@ class Runner
 
     public static function run2()
     {
-/* listing 10.25 */
+
         $tile = new Plains();
         print $tile->getWealthFactor(); // 2
-/* /listing 10.25 */
+
     }
 
     public static function run3()
     {
-/* listing 10.26 */
+
         $tile = new DiamondDecorator(new Plains());
         print $tile->getWealthFactor(); // 4
-/* /listing 10.26 */
+
     }
 
     public static function run4()
     {
-/* listing 10.27 */
+
         $tile = new PollutionDecorator(new DiamondDecorator(new Plains()));
         print $tile->getWealthFactor(); // 0
-/* /listing 10.27 */
+
     }
 }
